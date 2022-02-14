@@ -17,6 +17,21 @@ const objectLiterals = () => {
             return "converted to string";
         }
     }
+    // const prop1 = "width";
+
+    // elemStyle.width
+    // elemStyle["width"]
+    // elemStyle[prop1]
+
+    // elemStyle["height"]
+    // elemStyle.height = 123;
+
+    // debugger;
+
+    // elemStyle.background
+    // elemStyle["background"]
+    // elemStyle[backgroundProp]
+
 
     // console.log("elemStyle['color'] > ", elemStyle["color"]);
     // console.log("elemStyle['backgroundProp'] > ", elemStyle[backgroundProp]);
@@ -54,11 +69,11 @@ const objectLiterals = () => {
     // debugger;
 
     classroomBranches.forEach(classroomBranche => classrooms[classroomBranche] = []);
-    // console.log("classrooms > ", classrooms);
-    // debugger;
+    console.log("classrooms > ", classrooms);
+    //debugger;
 
     students.forEach(student => classrooms[student.classroom].push(student));
-    // console.log("classrooms > ", classrooms);
+    console.log("classrooms > ", classrooms);
 
     // Ayla (s3) nın sınıfındaki tüm öğrenciler
     // console.log(classrooms[s3.classroom]);

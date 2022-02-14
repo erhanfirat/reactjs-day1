@@ -1,28 +1,28 @@
 // DESCTRUCTURING
 
 const desttucturing = () => {
-    class Student {
-        id = "";
-        name = "";
-        grade = 0;
-        classroom = "";
+    // class Student {
+    //     id = "";
+    //     name = "";
+    //     grade = 0;
+    //     classroom = "";
 
-        constructor(id, name, grade, classroom) {
-            this.id = id;
-            this.name = name;
-            this.grade = grade;
-            this.classroom = classroom;
-        }
-    }
+    //     constructor(id, name, grade, classroom) {
+    //         this.id = id;
+    //         this.name = name;
+    //         this.grade = grade;
+    //         this.classroom = classroom;
+    //     }
+    // }
 
-    const s1 = new Student("123", "Ahmet", 99, "A");
-    const s2 = new Student("625", "Murat", 78, "B");
-    const s3 = new Student("711", "Ayla", 89, "A");
-    const s4 = new Student("154", "Zehra", 100, "B");
+    // const s1 = new Student("123", "Ahmet", 99, "A");
+    // const s2 = new Student("625", "Murat", 78, "B");
+    // const s3 = new Student("711", "Ayla", 89, "A");
+    // const s4 = new Student("154", "Zehra", 100, "B");
 
-    const students = [s1, s2, s3, s4];
-    const classrooms = {};
-    const classroomBranches = ["A", "B", "C", "D", "E", "F"]
+    // const students = [s1, s2, s3, s4];
+    // const classrooms = {};
+    // const classroomBranches = ["A", "B", "C", "D", "E", "F"]
 
 
     // usage in objects
@@ -35,7 +35,17 @@ const desttucturing = () => {
     //     classroom: s1.classroom
     // };
 
-    // const { id, name, ...rest } = s1;
+    const studentObject = {
+        id: "123",
+        name: "Ahmet Murat",
+        grade: 98,
+        classroom: "11-A"
+    }
+
+    const { id, name, ...rest } = studentObject;
+
+    console.log("id, name, rest > ", id, name, rest);
+    console.log({});
 
     // console.log("id ", id);
     // console.log("name ", name);
@@ -86,4 +96,4 @@ const desttucturing = () => {
 }
 
 
-//desttucturing();
+desttucturing();

@@ -25,12 +25,14 @@ function varTests() {
     function scopeTest() {
         var testfc = "Merhaba";
         console.log(testfc, " inside the function");
+        console.log("ifBlockScope", ifBlockScope, " inside the function");
 
     }
 
     scopeTest();
+    console.log(testfc, " inside the function");
 
-    console.log(testfc, " outside the function");
+    //console.log(testfc, " outside the function");
 
 }
 
@@ -42,21 +44,21 @@ function varTests() {
 // ** BLOCK SCOPE
 function letConstScopeTests() {
     if (3 > 0) {
-        let ifBlockScope = true;
     }
+    let ifBlockScope = true;
 
     switch (ifBlockScope) {
         case false: break;
         case true:
         default:
-            let caseBlockScope = 10;
     }
+    let caseBlockScope = 10;
 
 
     for (let ibs = 0; ibs < caseBlockScope; ibs++) {
         console.log(`${ibs}. loop in for`);
     }
-    console.log(`${ibs}. final value`);
+    //console.log(`${ibs}. final value`);
 
 
 
@@ -73,7 +75,7 @@ function letConstScopeTests() {
     console.log(testfc, " outside the function");
 
 }
-// letConstScopeTests();
+//letConstScopeTests();
 
 
 
@@ -93,12 +95,23 @@ function letConstDifferences() {
         name: "Ahmet",
         surName: "Telli",
         age: 62
-    }
+    };
+
+    const user2 = {
+        name: "Ahmet",
+        surName: "Telli",
+        age: 62
+    };
+
+    user = user2;
+
+    const nn = [1, 5, 8, 65, 45];
+
 
     user.age = 63;
     console.log(user);
 }
-//letConstDifferences();
+// letConstDifferences();
 
 
 

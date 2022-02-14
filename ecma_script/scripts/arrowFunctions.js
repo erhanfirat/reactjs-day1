@@ -48,6 +48,7 @@ const user = {
 
 
 class Counter {
+    count = "";
     constructor(start, increment, wait) {
         this.count = start;
         this.p = document.createElement("p");
@@ -55,19 +56,22 @@ class Counter {
         document.body.appendChild(this.p);
 
         // anonymous function | inline function
-        setInterval(function () {
-            // console.log(this);
-            this.count += increment;
-            this.p.innerText = this.count;
-        }, wait);
-
-        // anonymous function
-        // setInterval(() => {
-        //     console.log(this);
+        // setInterval(function () {
+        //     // console.log(this);
         //     this.count += increment;
         //     this.p.innerText = this.count;
         // }, wait);
+
+        // anonymous function
+        setInterval(() => {
+            console.log(this);
+            const { count, p } = this;
+            count += increment;
+            p.innerText = count;
+        }, wait);
     }
+
+
 }
 
 // const counter1 = new Counter(0, 10, 500);
